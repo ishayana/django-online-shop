@@ -16,16 +16,16 @@
     <header>
         <nav>
             <img class="logo" src="../../static/img/logo1.png" alt="logo">
-            <ul>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>Blog</li></a>
+            <ul id="navbar">
+                <a href="#"><li>Home</li></a>                <a href="#"><li>Blog</li></a>
                 <a href="#"><li>Contact</li></a>
                 <a href="#"><li>About</li></a>
             </ul>
             <div class="user-auth">
                 <a class="login-btn" href="#">Login</a>
-                <a href="#">Sign up</a>
+                <a class="signup-btn" href="#">Sign up</a>
             </div>
+            <img class="menu" src="../../static/img/menu.png" alt="navbar" onclick="openNav()">
         </nav>
     </header>
 
@@ -35,6 +35,7 @@
                 <img class="logo-type" src="../../static/img/logotype.png" alt="logotype">
                 <img class="hero-cookie" src="../../static/img/funnycookie.png" alt="cookie-img">
             </div>
+            <i class="ri-arrow-down-wide-line" id="bottom-arr"></i>
         </section>
         <section class="two-cont">
             <img class="donut" id="donut" src="../../static/img/don.png" alt="">
@@ -51,6 +52,20 @@
         </section>
     </div>
 
+<script>
+    const menuBtn = document.querySelector('.menu')
+
+    document.addEventListener('click', function(event){
+        const navBar = document.querySelector('#navbar')
+        navBar.style.width = '50vw'
+        const insideMenubtn = menuBtn.contains(event.target)
+        const insideNavbar = navBar.contains(event.target)
+        if (!insideNavbar && !insideMenubtn){
+            navBar.style.width = '0vw'
+        }
+    })
+
+</script>
 
 </body>
 </html>
