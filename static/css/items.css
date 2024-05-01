@@ -1,0 +1,38 @@
+
+.cover-cont{
+    margin-top: 100px;
+    width: 100%;
+    height: 100vh;
+    background-color: #ede5d2;
+    display: flex;
+    justify-content: center;
+}
+
+.cover{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d8ceb8;
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    height: auto;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.cover h3{
+    font-size: 100px;
+    color: #865a44;
+    font-family: 'ELEPHNT', sans-serif;
+    margin: 20px;
+    font-weight: 300;
+}
+
+.img-cover{
+    float: right;
+    height: 300px;
+    object-fit: contain;
+    mask-image: linear-gradient(-90deg, black 10% , transparent);
+
+}
