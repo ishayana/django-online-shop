@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    CrèmeCraze
+{% endblock %}
+
+{% block body %}
+    <div class="cont">
+        <section class="one-cont">
+            <div class="one">
+                <img class="logo-type" src="{% static 'main/img/logotype.png' %}" alt="logotype">
+                <img class="hero-cookie" src="{% static 'main/img/funnycookie.png' %}" alt="cookie-img">
+            </div>
+            <i class="ri-arrow-down-wide-line" id="bottom-arr"></i>
+        </section>
+        <section class="two-cont">
+            <img class="donut" id="donut" src="{% static 'main/img/don.png' %}" alt="">
+            <img class="donut" id="donut1" src="{% static 'main/img/don1.png' %}" alt="">
+            <img class="donut" id="donut2" src="{% static 'main/img/don2.png' %}" alt="">
+            <div class="two">
+                <p class="title-two">Discover the magic of CrèmeCraze!</p>
+                <p class="txt-two"> Delight in our handcrafted pastries, made with the finest ingredients. Every bite is a celebration. Order now and taste the excellence!</p>
+                <button class="order-btn">
+                    <a href="{% url 'accounts:login' %}">Order Now</a>
+                    <img src="{% static 'main/svg/cookie.svg' %}" alt="cookie-icon">
+                </button>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+    

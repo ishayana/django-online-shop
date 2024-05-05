@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"/>
+    {% block style %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    
+</head>
+<body>
+    {% include 'include/navbar.html' %}
+    {% block body %}{% endblock %}
+    
+
+
+<script>
+    const menuBtn = document.querySelector('.menu')
+
+    document.addEventListener('click', function(event){
+        const navBar = document.querySelector('#navbar')
+        navBar.style.width = '50vw'
+        const insideMenubtn = menuBtn.contains(event.target)
+        const insideNavbar = navBar.contains(event.target)
+        if (!insideNavbar && !insideMenubtn){
+            navBar.style.width = '0vw'
+        }
+    })
+
+</script>
+
+</body>
+</html>
