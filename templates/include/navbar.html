@@ -2,13 +2,13 @@
     <nav>
         <img class="logo" src="../../static/img/logo1.png" alt="logo">
         <ul id="navbar">
-            <a href="../html/base.html"><li>Home</li></a>                <a href="#"><li>Blog</li></a>
+            <a href="{% url 'home:home' %}"><li>Home</li></a>                <a href="#"><li>Blog</li></a>
             <a href="#"><li>Contact</li></a>
             <a href="#"><li>About</li></a>
         </ul>
         <div class="user-auth">
-            <a class="login-btn" href="#">Login</a>
-            <a class="signup-btn" href="#">Sign up</a>
+            <a class="login-btn" href="{% url 'accounts:login' %}">Login</a>
+            <a class="signup-btn" href="{% url 'accounts:register' %}">Sign up</a>
         </div>
         <img class="menu" src="../../static/img/menu.png" alt="navbar" onclick="openNav()">
     </nav>

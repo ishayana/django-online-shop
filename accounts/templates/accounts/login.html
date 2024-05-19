@@ -1,30 +1,33 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<<<<<<< HEAD
 CC: Login
-=======
-
->>>>>>> c314068622ef19aebf65029bd99c89c92da39472
 {% endblock %}
 
 
 {% block style %}
-<<<<<<< HEAD
+
 {% load static %}
 <link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
-=======
+<link rel="stylesheet" href="{% static 'accounts/css/register.css' %}">
 
->>>>>>> c314068622ef19aebf65029bd99c89c92da39472
 {% endblock %}
 
 
 {% block body %}
-<<<<<<< HEAD
-    <section class="login-cont">
-        
-    </section>
-=======
 
->>>>>>> c314068622ef19aebf65029bd99c89c92da39472
+<div class="log-aligner">
+    <div class="login-container">
+        <h2 class="reg-title">Login!<p class="login-txt">We're thrilled to see you again!</p></h2>
+        <form class="login-form" action="" method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input class="def-btn" type="submit" value="Login">
+        </form>
+        <p class="have-acc">Don't have an account?  <a href="{% url 'home:home' %}">Sing up</a></p>
+        <hr id="hline">
+        <a id="forgot-pass" href="#">Forgot Password?</a>
+    </div>
+</div>
+
 {% endblock %}
