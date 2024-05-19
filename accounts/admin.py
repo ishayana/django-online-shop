@@ -1,9 +1,7 @@
 from django.contrib import admin
-<<<<<<< HEAD
 from django.contrib.auth.admin import UserAdmin
 from accounts.models import User
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-# Register your models here.
 
 
 class CustomUserAdmin(UserAdmin):
@@ -25,7 +23,5 @@ class CustomUserAdmin(UserAdmin):
         ),
     )
 admin.site.register(User, CustomUserAdmin)
-=======
 
-# Register your models here.
->>>>>>> c314068622ef19aebf65029bd99c89c92da39472
+

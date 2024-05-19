@@ -1,8 +1,8 @@
 from django.db import models
-<<<<<<< HEAD
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from .manager import UserManager
-# Create your models here.
+
+
 ROLE_CHOICES = { 
         'vip' : 'vip',
         'regular' : 'regular',
@@ -26,7 +26,3 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
     
-=======
-
-# Create your models here.
->>>>>>> c314068622ef19aebf65029bd99c89c92da39472
