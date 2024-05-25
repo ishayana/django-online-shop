@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from accounts.models import User
+from accounts.models import User, OneTimePass
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 
 
@@ -25,3 +25,6 @@ class CustomUserAdmin(UserAdmin):
 admin.site.register(User, CustomUserAdmin)
 
 
+@admin.register(OneTimePass)
+class OneTimePassAdmin(admin.ModelAdmin):
+    list_display = ('phone', 'code', 'created')

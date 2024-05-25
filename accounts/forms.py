@@ -27,6 +27,10 @@ class UserRegistrationForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder' : 'Email'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder' : 'Password'}))
 
+
+class UserVerifyForm(forms.Form):
+    code = forms.IntegerField(label=False, widget=forms.TextInput(attrs={'placeholder' : 'Enter code', 'class' : 'fields'}))
+
 class UserLoginForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

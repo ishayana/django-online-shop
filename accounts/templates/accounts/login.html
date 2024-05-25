@@ -10,6 +10,7 @@ CC: Login
 {% load static %}
 <link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
 <link rel="stylesheet" href="{% static 'accounts/css/register.css' %}">
+<link rel="stylesheet" href="{% static 'css/def.css' %}">
 
 {% endblock %}
 
@@ -18,13 +19,14 @@ CC: Login
 
 <div class="log-aligner">
     <div class="login-container">
-        <h2 class="reg-title">Login!<p class="login-txt">We're thrilled to see you again!</p></h2>
+        <h2 class="title">Login!</h2>
+        <p class="form-txt">We're thrilled to see you again!</p>
         <form class="login-form" action="" method="POST">
             {{ form.as_p }}
             {% csrf_token %}
             <input class="def-btn" type="submit" value="Login">
         </form>
-        <p class="have-acc">Don't have an account?  <a href="{% url 'home:home' %}">Sing up</a></p>
+        <p class="have-acc">Don't have an account?  <a href="{% url 'accounts:register' %}">Sing up</a></p>
         <hr id="hline">
         <a id="forgot-pass" href="#">Forgot Password?</a>
     </div>

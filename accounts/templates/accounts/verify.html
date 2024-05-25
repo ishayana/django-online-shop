@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+    CC: Verify Phone-number    
+{% endblock %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/css/verify.css' %}">
+<link rel="stylesheet" href="{% static 'css/def.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<div class="ver-cont">
+    <h2 class="title" id="verify-title">Verify Phone-number!</h2>
+    <p class="form-txt">Please enter your verification code!</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="def-btn" value="Submit">
+    </form>
+</div>
+{% endblock %}

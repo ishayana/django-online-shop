@@ -1,0 +1,32 @@
+.alert-cont{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 60px 0 0 0;
+    z-index: 99;
+  }
+  
+  .error-alert, .info-alert, .success-alert, .danger-alert {
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  .alert-txt{
+    text-align: center;
+    color: rgb(37, 37, 37);
+  }
+
+
+.success-alert{
+    background-color: rgba(97, 193, 95, .3);
+}
+.error-alert{
+    background-color: rgba(219, 73, 48, .3);
+}
+.danger-alert{
+    background-color: rgba(255, 143, 11, .3);
+}
+.info-alert{
+    background-color: rgba(77, 143, 253, .3);
+}

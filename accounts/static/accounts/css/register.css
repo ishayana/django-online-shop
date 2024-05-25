@@ -16,21 +16,6 @@
     
 }
 
-.reg-title {
-    font-family: 'Abele', sans-serif;
-    font-size: 22x;
-    text-align: center;
-    color: #585858;
-    margin: 0 0 5px;
-    letter-spacing: -1.5px;
-    font-weight: 200;
-}
-
-.reg-txt {
-    font-size: 15px;
-    margin: 0 0 10px;
-    letter-spacing: normal;
-}
 
 .reg-form {
     display: flex;
@@ -39,55 +24,6 @@
     align-items: center;
 }
 
-.fields {
-    padding: 5%;
-    box-sizing: border-box;
-    margin: 5px 0%;
-    border-radius: 5px;
-    border: none;
-    background-color: #ffffff;
-    width: 190px;
-    height: 30px;
-    font-family: 'Dosis', sans-serif;
-    transition: all .5s ease;
-}
-
-.fields:hover {
-    box-shadow: inset 0 0 5px black;
-    color: black;
-    background-color: white;
-}
-
-.fields:focus {
-    border: 1px solid rgba(68,46,36,1);
-    box-shadow: 0px 2px 0px 0px rgba(68,46,36,1);
-    transform: translateY(-2px);
-    outline: none;
-
-    background-color: white;
-    color: black;
-} 
-
-.def-btn {
-    margin: 10px 0 0 0;
-    width: 100%;
-    display: inline-block;
-    text-decoration: none;
-    color: #442e24;
-    font-size: 15px;
-    font-weight: bold;
-    border: 1px solid #442e24;
-    box-shadow: 0px 3px 0px 0px rgba(68,46,36,1);
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-}
-
-.def-btn:hover{
-    box-shadow: 0 0 0 0;
-    transform: translateY(4px);
-
-}
 
 .have-acc {
     margin: 10px 0;
@@ -99,6 +35,6 @@
 
 .have-acc-link {
     text-decoration: none;
-    color:#163536;
+    color:#865a44;
     font-weight: 900;
 }
