@@ -1,6 +1,7 @@
 from django import forms
 from .models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.core.exceptions import ValidationError
 
 # You can use the forms.form but you must write confirmation passwords and override save
 class CustomUserCreationForm(UserCreationForm):
@@ -26,6 +27,23 @@ class UserRegistrationForm(forms.Form):
     phone = forms.CharField(max_length=11, widget=forms.TextInput(attrs={'placeholder' : 'Phone number'}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder' : 'Email'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder' : 'Password'}))
+
+    def clean_email(self): 
+        email = self.cleaned_data['email']
+        try:
+            user = User.objects.get(email=email)
+            raise ValidationError('This email address is already in use.')
+        except User.DoesNotExist:
+            return email
+        
+    def clean_phone(self):
+        phone = self.cleaned_data['phone']
+        try:
+            User.objects.get(phone=phone)
+            raise ValidationError('This phone-number is already is use.')
+        except User.DoesNotExist:
+            print('except operate')
+            return phone
 
 
 class UserVerifyForm(forms.Form):

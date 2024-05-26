@@ -30,7 +30,7 @@ class UserRegistrationView(View):
             }
             messages.success(request, 'Check your phone, We sent you a code', 'info')
             return redirect('accounts:verify')
-        return redirect('home:home')
+        return render(request, self.template_name, {'form' : form})
 
 
 class UserVerifyView(View):
